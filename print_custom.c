@@ -51,9 +51,11 @@ int print_rev(va_list l, flags_t *f)
 
 	(void)f;
 	if (!s)
-	s = "(null)";
+		s = "(null)";
+
 	while (s[i])
 		i++;
+
 	for (j = i - 1; j >= 0; j--)
 		_putchar(s[j]);
 
