@@ -33,7 +33,6 @@ int print_unsigned(va_list l, flags_t *f)
 {
     unsigned int u = va_arg(l, unsigned int);
     char *str = convert(u, 10, 0);
-
     (void)f;
     return (_puts(str));
 }
@@ -46,7 +45,6 @@ int print_unsigned(va_list l, flags_t *f)
 void print_number(int n)
 {
     unsigned int n1;
-
     if (n < 0)
     {
         _putchar('-');
@@ -54,7 +52,6 @@ void print_number(int n)
     }
     else
         n1 = n;
-
     if (n1 / 10)
         print_number(n1 / 10);
     _putchar((n1 % 10) + '0');
